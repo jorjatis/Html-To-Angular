@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpModule } from '@angular/http';
+
 // Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -11,6 +13,9 @@ import { WebItemComponent } from './components/web-item/web-item.component';
 
 // Rutas
 import { APP_ROUTING } from './app.routes';
+
+// Servicios
+import { InformacionService } from './services/informacion.service';
 
 @NgModule({
   declarations: [
@@ -23,9 +28,12 @@ import { APP_ROUTING } from './app.routes';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    InformacionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
