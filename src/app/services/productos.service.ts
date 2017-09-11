@@ -25,4 +25,8 @@ export class ProductosService {
       });
   }
 
+  public cargarProducto( cod:string ) {
+    return this.http.get(`https://paginaweb-9887d.firebaseio.com/productos/${cod}.json`);
+  }
+
 }
