@@ -23,7 +23,7 @@ export class WebItemComponent {
         // console.log(data.json());
         this.cod = parametros['id'];
         this.producto = data.json();
-        console.log(this.producto);
+        // console.log(this.producto);
       })
     });
 
